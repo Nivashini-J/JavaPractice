@@ -43,6 +43,18 @@ public class SumofNumbersinString {
 		}
 		System.out.println("***Approach 3***");
 		System.out.println("Sum of the given digits:"+sum2);
+		
+		//Approach 4 using Character class
+		String text = "asdf1qwer9as8d7";
+		int sum3 = 0;
+		
+		for (int i = 0; i < text.length(); i++) {
+			if(Character.isDigit(text.charAt(i))) {
+				sum3 += Integer.parseInt(String.valueOf(text.charAt(i))); //converts char to String and then from String to Integer because Sum is integer
+			}
+		}
+		System.out.println("***Approach 4***");
+		System.out.println("Sum of the given digits:"+sum3);
 	}
 
 }
